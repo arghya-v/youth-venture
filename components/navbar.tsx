@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link href="/" className="mr-10 transition-transform transform hover:scale-110">
             <Image src="/youthlogo.png" alt="Youth Venture" width={64} height={64} className="h-16" />
           </Link>
-          {['About', 'Our Team', 'Mission', 'Contact'].map((label) => (
+          {['About', 'Team', 'Mission', 'Contact'].map((label) => (
             <Link
               key={label}
               href={`/${label.toLowerCase().replace(' ', '')}`}
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <X />
               </button>
             </div>
-            {['About', 'Our Team', 'Mission', 'Contact'].map((label) => (
+            {['About', 'Team', 'Mission', 'Contact'].map((label) => (
               <Link
                 key={label}
                 href={`/${label.toLowerCase().replace(' ', '')}`}
