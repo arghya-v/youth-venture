@@ -40,7 +40,7 @@ const Navbar = () => {
               alt="Logo"
               width={48}
               height={48}
-              className="h-12 p-1 border-2 border-gray-300 rounded-full"
+              className="h-12 border-2 border-gray-300 rounded-full"
             />
           </Link>
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
               alt="Youth Venture"
               width={64}
               height={64}
-              className="h-16 p-1 border-2 border-gray-300 rounded-full"
+              className="h-16 border-2 border-gray-300 rounded-full"
             />
           </Link>
           {['About', 'Team', 'Mission', 'Contact'].map((label) => (
