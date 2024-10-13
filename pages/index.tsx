@@ -12,7 +12,6 @@ const poppins = Poppins({
 const Home = () => {
   const [isClient, setIsClient] = useState(false);
 
-  // Ensure the component only runs this logic on the client side.
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -25,7 +24,7 @@ const Home = () => {
           className="absolute inset-0 -z-10"
           style={{
             backgroundImage:
-              "radial-gradient(#bfbfbf 1.55px, transparent 1.55px), radial-gradient(#bfbfbf 1.55px, #e5e5f7 1.55px)",
+              "radial-gradient(#aeaebf 1.55px, transparent 1.55px), radial-gradient(#aeaebf 1.55px, #e5e5f7 1.55px)",
             backgroundSize: "62px 62px",
             backgroundPosition: "0 0, 31px 31px",
           }}
