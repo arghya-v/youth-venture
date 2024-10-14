@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
 
 // TypeScript interface for Message props
 interface MessageProps {
@@ -81,36 +82,50 @@ const Message = styled.p<MessageProps>`
   opacity: ${(props) => (props.visible ? 1 : 0)};
 `;
 
+// Main Contact Us Form component
 const ContactUsForm: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [message, setMessage] = useState({ text: '', error: false, visible: false });
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Handle input change events with proper type annotations
+  // Handle input change events
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission with proper type annotations
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!emailRegex.test(formData.email)) {
       setMessage({ text: 'Please enter a valid email address.', error: true, visible: true });
       return;
     }
-    // Handle successful form submission logic here
-    setMessage({ text: 'Form submitted successfully!', error: false, visible: true });
 
-    // Reset form data after submission
-    setFormData({ name: '', email: '', message: '' });
+    // EmailJS service parameters
+    const emailParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    // Send email using EmailJS
+    emailjs.send('service_p9dnowo', 'template_fufsxgc', emailParams, '4S3cd0A769y1p8qB2')
+      .then(() => {
+        setMessage({ text: 'Form submitted successfully!', error: false, visible: true });
+        setFormData({ name: '', email: '', message: '' });  // Reset form data
+      })
+      .catch(() => {
+        setMessage({ text: 'Failed to send the message. Please try again.', error: true, visible: true });
+      });
   };
 
+  // Automatically hide the message after 10 seconds
   useEffect(() => {
     if (message.visible) {
       const timer = setTimeout(() => {
         setMessage((prev) => ({ ...prev, visible: false }));
-      }, 10000); // Hide after 10 seconds
+      }, 10000);
 
       return () => clearTimeout(timer);
     }
