@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import Navbar from '../components/navbar';
-import { Poppins } from 'next/font/google';
+import { AiFillLinkedin, AiFillInstagram, AiOutlineMail } from "react-icons/ai";
+import Navbar from "../components/navbar";
+import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import ContactUsForm from '@/components/contactform';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import ContactUsForm from "@/components/contactform";
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '700', '500', '600'],
+  subsets: ["latin"],
+  weight: ["400", "700", "500", "600"],
 });
 
 const Contact = () => {
@@ -34,13 +35,47 @@ const Contact = () => {
       {/* Main Content */}
       <Navbar />
       <main className="p-10 pt-32 text-center">
-        <h1 className="text-7xl font-semibold mt-5 text-[#5474a5]">
-            Contact Us
-        </h1>
+        <h1 className="text-7xl font-bold mt-5 text-[#5474a5]">Contact Us</h1>
         <p className="text-[#828282] font-medium text-3xl p-3">
-          Feel free to contact us through the form below!
+          Feel free to contact us through the form below for any inquiries or
+          concerns. <br /> We will get back to you as soon as possible!
         </p>
         <ContactUsForm />
+        <p className="text-[#828282] font-medium text-2xl p-2">Or Visit our Socials!</p>
+        {/* Social Media Icons */}
+        <div className="flex justify-center gap-10 mt-3">
+          <a
+            href="https://www.linkedin.com/company/youth-venture-international/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <AiFillLinkedin
+              size={100}
+              style={{ color: "#5474a5", transition: "opacity 0.3s" }}
+              className="hover:opacity-75"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/youth.venture_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <AiFillInstagram
+              size={100}
+              style={{ color: "#5474a5", transition: "opacity 0.3s" }}
+              className="hover:opacity-75"
+            />
+          </a>
+          <a href="mailto:youthventureint@gmail.com" aria-label="Email">
+            <AiOutlineMail
+              size={100}
+              style={{ color: "#5474a5", transition: "opacity 0.3s" }}
+              className="hover:opacity-75"
+            />
+          </a>
+        </div>
       </main>
 
       <Analytics />
