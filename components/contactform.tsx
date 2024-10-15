@@ -149,6 +149,7 @@ const ContactUsForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
         />
+        
         <SubmitButton type="submit">Submit</SubmitButton>
       </form>
       {/* Message display */}
