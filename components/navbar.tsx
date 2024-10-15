@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center justify-between w-full">
           <button
             onClick={toggleMenu}
-            className="bg-black text-xl p-2"
+            className="text-black text-xl p-2"
             aria-label="Open menu"
           >
             <Menu size={28} />
