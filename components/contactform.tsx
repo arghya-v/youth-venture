@@ -2,13 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 
-// TypeScript interface for Message props
-interface MessageProps {
-  error: boolean;
-  visible: boolean;
-  children: React.ReactNode;
-}
-
 // Styled components for the form and messages
 const FormContainer = styled.div`
   background-color: #F5F5F5;
