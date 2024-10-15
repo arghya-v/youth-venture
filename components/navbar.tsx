@@ -26,13 +26,12 @@ const Navbar = () => {
         <div className="md:hidden flex items-center justify-between w-full">
           <button
             onClick={toggleMenu}
-            className="text-xl p-2"
+            className="bg-black text-xl p-2"
             aria-label="Open menu"
           >
             <Menu size={28} />
           </button>
 
-          {/* Centered Logo */}
           <Link
             href="/"
             className="absolute left-1/2 transform -translate-x-1/2 transition-transform hover:scale-110"

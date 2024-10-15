@@ -70,7 +70,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const Message = styled.p<MessageProps>`
+const Message = styled.p<{ error: boolean; visible: boolean }>`
   position: fixed;
   left: 20px;
   bottom: 20px;
@@ -80,6 +80,7 @@ const Message = styled.p<MessageProps>`
   border-radius: 5px;
   transition: opacity 0.5s ease;
   opacity: ${(props) => (props.visible ? 1 : 0)};
+  pointer-events: none; /* Prevent interaction when hidden */
 `;
 
 // Main Contact Us Form component
