@@ -31,9 +31,11 @@ const Navbar = () => {
           >
             <Menu size={28} />
           </button>
+
+          {/* Centered Logo */}
           <Link
             href="/"
-            className="flex-grow-0 mx-auto transition-transform transform hover:scale-110"
+            className="absolute left-1/2 transform -translate-x-1/2 transition-transform hover:scale-110"
           >
             <Image
               src="/youthlogo.png"
@@ -43,6 +45,11 @@ const Navbar = () => {
               className="h-12 border-2 border-gray-300 rounded-full"
             />
           </Link>
+
+          <div className="invisible">
+            {/* Placeholder to balance the menu button */}
+            <Menu size={28} />
+          </div>
         </div>
 
         {/* Desktop Navigation */}
