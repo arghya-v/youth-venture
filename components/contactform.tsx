@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
 
-// Styled components for the form and messages
 const FormContainer = styled.div`
   background-color: #F5F5F5;
   padding: 40px;
@@ -63,32 +62,29 @@ const SubmitButton = styled.button`
   }
 `;
 
-const Message = styled.p<{ error: boolean; visible: boolean }>`
+const Message = styled.p<{ $error: boolean; $visible: boolean }>`
   position: fixed;
   left: 20px;
   bottom: 20px;
-  background-color: ${(props) => (props.error ? 'red' : 'green')};
+  background-color: ${(props) => (props.$error ? 'red' : 'green')};
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
   transition: opacity 0.5s ease;
-  opacity: ${(props) => (props.visible ? 1 : 0)};
-  pointer-events: none; /* Prevent interaction when hidden */
+  opacity: ${(props) => (props.$visible ? 1 : 0)};
+  pointer-events: none;
 `;
 
-// Main Contact Us Form component
 const ContactUsForm: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [message, setMessage] = useState({ text: '', error: false, visible: false });
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Handle input change events
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!emailRegex.test(formData.email)) {
@@ -96,25 +92,22 @@ const ContactUsForm: React.FC = () => {
       return;
     }
 
-    // EmailJS service parameters
     const emailParams = {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
     };
 
-    // Send email using EmailJS
     emailjs.send('service_p9dnowo', 'template_fufsxgc', emailParams, '4S3cd0A769y1p8qB2')
       .then(() => {
         setMessage({ text: 'Form submitted successfully!', error: false, visible: true });
-        setFormData({ name: '', email: '', message: '' });  // Reset form data
+        setFormData({ name: '', email: '', message: '' });
       })
       .catch(() => {
         setMessage({ text: 'Failed to send the message. Please try again.', error: true, visible: true });
       });
   };
 
-  // Automatically hide the message after 10 seconds
   useEffect(() => {
     if (message.visible) {
       const timer = setTimeout(() => {
@@ -149,11 +142,10 @@ const ContactUsForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
         />
-        
+
         <SubmitButton type="submit">Submit</SubmitButton>
       </form>
-      {/* Message display */}
-      <Message error={message.error} visible={message.visible}>
+      <Message $error={message.error} $visible={message.visible}>
         {message.text}
       </Message>
     </FormContainer>
