@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Preload critical font files for improved performance */}
+        {/* Preload only critical font files */}
         <link
           rel="preload"
           href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLPTed3FBGPaTSQ.woff2"
@@ -20,7 +20,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
 
-        {/* Link stylesheet to load Poppins fonts */}
+        {/* Link stylesheet for other font variants */}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
