@@ -25,10 +25,10 @@ const Home = () => {
       {/* Main Content */}
       <Navbar />
       <main className="p-5 md:p-10 pt-20 md:pt-32 text-center">
-        <h1 className="text-6xl md:text-6xl lg:text-8xl font-semibold mt-20 leading-snug max-w-full break-words">
-          <span className="text-black">We are</span> <br />
-          <span className="text-[#5474a5] font-bold">Youth Venture</span>
-        </h1>
+      <h1 className="text-7xl lg:text-8xl font-semibold mt-20 leading-snug">
+        <span className="text-black">We are</span> <br />
+        <span className="text-[#5474a5] font-bold">Youth Venture</span>
+      </h1>
         <p className="text-[#828282] font-medium text-3xl md:text-2xl lg:text-3xl p-3">
           A student-led non-profit organization <br />
           dedicated to fostering passion for business.
