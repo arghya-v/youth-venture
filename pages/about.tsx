@@ -21,15 +21,15 @@ const About = () => {
         }}
       />
       <Navbar />
-      <main className="pt-32 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-5 text-[#5474a5]">Who We Are</h1>
+      <main className="pt-60 mt-16 text-center">
+        <h1 className="text-4xl md:text-7xl lg:text-7xl font-bold mt-4 text-[#5474a5]">Who We Are</h1>
         <FiChevronDown size={36} className="text-[#5474a5] mt-10 mx-auto animate-bounce opacity-70" />
         
-        <div className="flex flex-col md:flex-row items-center justify-center mt-10 bg-[#cfd8e7]">
+        <div className="flex flex-col md:flex-row items-center justify-center mt-16 bg-[#cfd8e7]">
           <div className="bg-[#5473a4] w-full md:w-1/2 p-6 md:p-10 flex items-center justify-center md:justify-start">
-            <h2 className="text-5xl md:text-6xl lg:text-8xl font-semibold mb-3 text-center md:text-left text-white">Our <br /> Goals</h2>
+            <h2 className="text-5xl md:text-6xl lg:text-8xl font-semibold mb-3 text-center md:text-left text-white md:p-9">Our <br /> Goals</h2>
           </div>
-          <div className="bg-[#5473a4] w-full md:w-1/2 p-8 md:p-11 text-lg md:text-2xl text-white flex items-center justify-center md:justify-end text-center md:text-right">
+          <div className="bg-[#5473a4] w-full md:w-1/2 p-8 md:p-16 text-lg md:text-2xl text-white flex items-center justify-center md:justify-end text-center md:text-right">
             <p>
               Our goals are to engage youth in the world of business by fostering connections between students, providing valuable networking opportunities, and promoting the growth of innovative thinking. Through these initiatives, we aim to inspire and empower the next generation of leaders and entrepreneurs.
             </p>
