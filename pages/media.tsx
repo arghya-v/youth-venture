@@ -7,7 +7,7 @@ const poppins = Poppins({
   weight: ['400', '700', '500', '600'],
 });
 
-const Mission = () => {
+const Media = () => {
   return (
     <div className={`${poppins.className} relative`}>
         <div className="fixed inset-0 -z-10"
@@ -21,9 +21,9 @@ const Mission = () => {
 
       <Navbar />
       <main className="p-10 pt-32 text-center"> 
-      <h1 className="text-7xl font-bold mt-5 text-[#5474a5]">Who We Are</h1>
+      <h1 className="text-7xl font-bold mt-5 text-[#5474a5]">Media</h1>
       <p className="text-[#828282] font-medium text-3xl p-3">
-           Learn more about us!
+           Check out our media coming soon through our socials and more!
         </p>
       </main>
       <Analytics />
@@ -32,4 +32,4 @@ const Mission = () => {
   );
 };
 
-export default Mission;
+export default Media;
