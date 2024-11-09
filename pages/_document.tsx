@@ -6,14 +6,14 @@ export default function Document() {
       <Head>
         {/* Preload only critical font files */}
         <link
-          rel="preload"
+          rel="preconnect"
           href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLPTed3FBGPaTSQ.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
-          rel="preload"
+          rel="preconnect"
           href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfed3FBGPaTSQ.woff2"
           as="font"
           type="font/woff2"

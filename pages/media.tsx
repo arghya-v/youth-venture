@@ -26,6 +26,8 @@ const Media = () => {
            Check out our media coming soon through our socials and more!
         </p>
       </main>
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div className="elfsight-app-832c6128-92d1-460a-8580-0dbec9aa21fb" data-elfsight-app-lazy></div>
       <Analytics />
       <SpeedInsights />
     </div>
