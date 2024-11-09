@@ -23,7 +23,7 @@ const Media = () => {
       <main className="p-10 pt-32 text-center"> 
       <h1 className="text-7xl font-bold mt-5 text-[#5474a5]">Media</h1>
       <p className="text-[#828282] font-medium text-3xl p-3">
-           Check out our media coming soon through our socials and more!
+           Check out our media through our socials and more!
         </p>
       </main>
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
