@@ -18,7 +18,7 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full border-b-2 border-gray-300 z-50 ${poppins.className}`}
       style={{
-        backgroundColor: '#e5e5f7',
+        backgroundColor: '#f2f2f2',
       }}
     >
       <nav className="flex items-center p-6 w-screen max-w-screen-xl mx-auto">
@@ -82,7 +82,7 @@ const Navbar = () => {
         <div className="fixed left-0 right-0 bg-white text-black shadow-lg">
           <div className="flex flex-col p-4">
             <div className="flex justify-between items-center mb-4">
-              <span className="font-bold text-[#5474a5]">Menu</span>
+              <span className="font-bold text-[#396d93]">Menu</span>
               <button
                 onClick={toggleMenu}
                 className="text-2xl"

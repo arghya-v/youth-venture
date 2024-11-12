@@ -8,8 +8,14 @@ const FormContainer = styled.div`
   max-width: 675px;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s ease; /* Move transition here */
+
+  &:hover {
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.4);
+  }
 `;
+
 
 const InputField = styled.input`
   width: 100%;
@@ -44,7 +50,7 @@ const TextArea = styled.textarea`
 `;
 
 const SubmitButton = styled.button`
-  background-color: #5474a5;
+  background-color: #396d93;
   color: #FFFFFF;
   padding: 15px;
   border: 1px solid #D1D1D1;
@@ -56,7 +62,7 @@ const SubmitButton = styled.button`
   transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
   &:hover {
-    background-color: #6B83B6;
+    background-color: #4a80a8;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
     border-color: #475B8A;
   }

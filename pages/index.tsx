@@ -16,7 +16,7 @@ const Home = () => {
         className="absolute inset-0 -z-10"
         style={{
           backgroundImage:
-            "radial-gradient(#aeaebf 1.55px, transparent 1.55px), radial-gradient(#aeaebf 1.55px, #e5e5f7 1.55px)",
+            "radial-gradient(#d9d9d9 1.55px, transparent 1.55px), radial-gradient(#d9d9d9 1.55px, #f2f2f2 1.55px)",
           backgroundSize: "62px 62px",
           backgroundPosition: "0 0, 31px 31px",
         }}
@@ -27,9 +27,9 @@ const Home = () => {
       <main className="p-5 md:p-10 pt-20 md:pt-32 text-center">
       <h1 className="text-7xl lg:text-8xl font-semibold mt-20 leading-snug">
         <span className="text-black">We are</span> <br />
-        <span className="text-[#5474a5] font-bold">Youth Venture</span>
+        <span className="text-[#396d93] font-bold">Youth Venture</span>
       </h1>
-        <p className="text-[#828282] font-medium text-3xl md:text-2xl lg:text-3xl p-3">
+        <p className="text-[#829CB0] font-medium text-3xl md:text-2xl lg:text-3xl p-3">
           A student-led non-profit organization <br />
           dedicated to fostering passion for business.
         </p>

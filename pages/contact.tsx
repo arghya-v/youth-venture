@@ -41,7 +41,7 @@ const Contact = () => {
           className="fixed inset-0 -z-10"
           style={{
             backgroundImage:
-              "radial-gradient(#e5e5f7 1.55px, transparent 1.55px), radial-gradient(#e5e5f7 1.55px, #e5e5f7 1.55px)",
+              "radial-gradient(#f2f2f2 1.55px, transparent 1.55px), radial-gradient(#f2f2f2 1.55px, #f2f2f2 1.55px)",
             backgroundSize: "62px 62px", // Adjust this size as needed
             backgroundPosition: "0 0, 31px 31px",
           }}
@@ -52,8 +52,8 @@ const Contact = () => {
 
         {/* Main Content */}
         <main className="flex-grow p-10 pt-32 text-center">
-          <h1 className="text-7xl font-bold mt-5 text-[#5474a5]">Contact Us</h1>
-          <p className="text-[#828282] font-medium text-3xl p-3">
+          <h1 className="text-7xl font-bold mt-5 text-[#396d93]">Contact Us</h1>
+          <p className="text-[#829cb0] font-medium text-3xl p-3">
             Feel free to contact us through the form below for any inquiries or concerns.
             <br /> We will get back to you as soon as possible!
           </p>
@@ -85,7 +85,7 @@ const Contact = () => {
                 <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
                   <Icon
                     size={100}
-                    style={{ color: "#5474a5", transition: "opacity 0.3s" }}
+                    style={{ color: "#396d93", transition: "opacity 0.3s" }}
                     className="hover:opacity-75"
                   />
                 </a>
