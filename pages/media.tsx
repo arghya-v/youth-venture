@@ -10,7 +10,6 @@ const poppins = Poppins({
 });
 
 const Media = () => {
-  // Load the Elfsight script only on the client side to prevent slow loading and hydration issues
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const script = document.createElement('script');
@@ -34,15 +33,15 @@ const Media = () => {
       />
       
       <Navbar />
-      <main className="p-10 pt-32 text-center">
-        <h1 className="text-7xl font-bold mt-5 text-[#396d93]">Media</h1>
-        <p className="text-[#829cb0] font-medium text-3xl p-3">
+      <main className="p-4 pt-20 md:p-10 md:pt-32 text-center">
+        <h1 className="text-4xl md:text-7xl font-bold mt-5 text-[#396d93]">Media</h1>
+        <p className="text-[#829cb0] font-medium text-xl md:text-3xl p-2 md:p-3">
           Check out our media through our socials and more!
         </p>
       </main>
 
       {/* Elfsight widget container */}
-      <div className="elfsight-app-832c6128-92d1-460a-8580-0dbec9aa21fb"></div>
+      <div className="elfsight-app-832c6128-92d1-460a-8580-0dbec9aa21fb max-w-full overflow-hidden mx-auto px-4"></div>
       
       {/* Analytics */}
       <Analytics />
