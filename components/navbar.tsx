@@ -69,7 +69,7 @@ const Navbar = () => {
             <Link
               key={label}
               href={`/${label.toLowerCase().replace(' ', '')}`}
-              className="mr-10 font-medium text-[#5474a5] transition-transform transform hover:scale-110"
+              className="mr-10 font-medium text-[#396d93] transition-transform transform hover:scale-110"
             >
               {label}
             </Link>
