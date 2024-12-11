@@ -51,7 +51,7 @@ const Event = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Fiona Chen</h3>
-            <p className="text-[#829cb0] font-medium">Queen's Smith School of Business</p>
+            <p className="text-[#829cb0] font-medium">Queen&apos;s Smith School of Business</p>
           </div>
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Emma Thompson</h3>
