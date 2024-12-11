@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { FiChevronDown } from "react-icons/fi";
+import Founders from "../components/founders";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -67,6 +68,7 @@ const About = () => {
             </h3>
           </div>
         </div>
+        <Founders></Founders>
       </main>
 
       <Analytics />

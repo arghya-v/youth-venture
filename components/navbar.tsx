@@ -65,7 +65,7 @@ const Navbar = () => {
               className="h-16 border-2 border-gray-300 rounded-full"
             />
           </Link>
-          {['About', 'Team', 'Media', 'Contact'].map((label) => (
+          {['About', 'Team', 'Media', 'Contact', 'Event'].map((label) => (
             <Link
               key={label}
               href={`/${label.toLowerCase().replace(' ', '')}`}
@@ -91,7 +91,7 @@ const Navbar = () => {
                 <X />
               </button>
             </div>
-            {['About', 'Team', 'Media', 'Contact'].map((label) => (
+            {['About', 'Team', 'Media', 'Contact', 'Event'].map((label) => (
               <Link
                 key={label}
                 href={`/${label.toLowerCase().replace(' ', '')}`}
