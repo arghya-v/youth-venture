@@ -44,7 +44,7 @@ const Event = () => {
           About the event:
         </h2>
         <p className="text-[#829cb0] font-medium text-xl md:text-3xl p-3 md:p-3">
-          Date: December 15th 4:30 - 6:30 PM
+          Date: December 15th 4:30 - 6:30 PM EST
         </p>
 
         {/* Four Columns */}
