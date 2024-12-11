@@ -44,15 +44,14 @@ const Event = () => {
           About the event:
         </h2>
         <p className="text-[#829cb0] font-medium text-xl md:text-3xl p-3 md:p-3">
-          Date: December 15th 4:30 - 6:30 PM<br></br>
-          Featuring students...
+          Date: December 15th 4:30 - 6:30 PM
         </p>
 
-        {/* Three Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        {/* Four Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Fiona Chen</h3>
-            <p className="text-[#829cb0] font-medium">Queen&apos;s Smith School of Business</p>
+            <p className="text-[#829cb0] font-medium">Queen's Smith School of Business</p>
           </div>
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Emma Thompson</h3>
@@ -62,17 +61,41 @@ const Event = () => {
             <h3 className="text-2xl font-bold text-[#396d93]">Keerthi Bomidi</h3>
             <p className="text-[#829cb0] font-medium">Wilfrid Laurier Lazardis</p>
           </div>
+          <div className="p-4 border rounded-lg shadow-lg bg-white">
+            <h3 className="text-2xl font-bold text-[#396d93]">Leo Bai</h3>
+            <p className="text-[#829cb0] font-medium">Western Ivey Business School</p>
+          </div>
         </div>
 
         {/* Schedule Image */}
         <div className="mt-12">
           <Image
-            src="/Schedule.png"  
+            src="/Schedule.png"
             alt="Event Schedule"
-            width={700}                
-            height={700}              
-            className="mx-auto rounded-lg shadow-lg"
+            width={700}
+            height={700}
+            className="mx-auto w-full max-w-4xl rounded-lg shadow-lg"
           />
+        </div>
+
+        {/* Additional Speaker Section */}
+        <h2 className="text-4xl md:text-5xl font-bold mt-12 text-[#396d93]">
+          Additional Speaker:
+        </h2>
+        <div className="grid grid-cols-1 gap-8 mt-12">
+          <div className="p-4 border rounded-lg shadow-lg bg-white">
+            <h3 className="text-2xl font-bold text-[#396d93]">Isabella Ruan</h3>
+            <p className="text-[#829cb0] font-medium">
+              <a
+                href="https://www.etsy.com/ca/shop/DaisyStems"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#396d93] underline hover:text-[#2d5472] transition duration-300"
+              >
+                Visit Daisy Stems on Etsy
+              </a>
+            </p>
+          </div>
         </div>
       </main>
 
