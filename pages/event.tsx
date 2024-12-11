@@ -2,6 +2,7 @@ import Navbar from "../components/navbar";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -51,7 +52,7 @@ const Event = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Fiona Chen</h3>
-            <p className="text-[#829cb0] font-medium">Queen's Smith School of Business</p>
+            <p className="text-[#829cb0] font-medium">Queen&apos;s Smith School of Business</p>
           </div>
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Emma Thompson</h3>
@@ -65,10 +66,12 @@ const Event = () => {
 
         {/* Schedule Image */}
         <div className="mt-12">
-          <img
-            src="/Schedule.png"
-            alt="Event Schedule"
-            className="mx-auto w-full max-w-4xl rounded-lg shadow-lg"
+          <Image
+            src="/NextSchedule.png"  
+            alt="Next Event Schedule"
+            width={700}                
+            height={700}              
+            className="mx-auto rounded-lg shadow-lg"
           />
         </div>
       </main>
