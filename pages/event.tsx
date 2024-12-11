@@ -67,8 +67,8 @@ const Event = () => {
         {/* Schedule Image */}
         <div className="mt-12">
           <Image
-            src="/NextSchedule.png"  
-            alt="Next Event Schedule"
+            src="/Schedule.png"  
+            alt="Event Schedule"
             width={700}                
             height={700}              
             className="mx-auto rounded-lg shadow-lg"
