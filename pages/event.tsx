@@ -56,10 +56,24 @@ const Event = () => {
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Emma Thompson</h3>
             <p className="text-[#829cb0] font-medium">McMaster DeGroote</p>
+            <Image
+              src="/Emma_Thompson.jpeg"
+              alt="Emma Thompson"
+              width={200}
+              height={200}
+              className="mx-auto rounded-full mt-4"
+            />
           </div>
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Keerthi Bomidi</h3>
             <p className="text-[#829cb0] font-medium">Wilfrid Laurier Lazardis</p>
+            <Image
+              src="/Keerthi_Bomidi.jpeg"
+              alt="Keerthi Bomidi"
+              width={200}
+              height={200}
+              className="mx-auto rounded-full mt-4"
+            />
           </div>
           <div className="p-4 border rounded-lg shadow-lg bg-white">
             <h3 className="text-2xl font-bold text-[#396d93]">Leo Bai</h3>
