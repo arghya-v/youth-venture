@@ -85,22 +85,39 @@ const Event = () => {
         </div>
 
         {/* Additional Speaker Section */}
+        {/* Additional Speaker Section */}
         <h2 className="text-4xl md:text-5xl font-bold mt-12 text-[#396d93]">
           Additional Speaker:
         </h2>
         <div className="grid grid-cols-1 gap-8 mt-12">
-          <div className="p-4 border rounded-lg shadow-lg bg-white">
-            <h3 className="text-2xl font-bold text-[#396d93]">Isabella Ruan</h3>
-            <p className="text-[#829cb0] font-medium">
-              <a
-                href="https://www.etsy.com/ca/shop/DaisyStems"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#396d93] underline hover:text-[#2d5472] transition duration-300"
-              >
-                Visit Daisy Stems on Etsy
-              </a>
-            </p>
+          <div className="max-w-5xl mx-auto p-6 border rounded-lg shadow-lg bg-white flex items-center space-x-6">
+            <Image
+              src="/Isabella_Ruan.png" // Ensure this image path is correct
+              alt="Isabella Ruan"
+              width={250}
+              height={250}
+              className="rounded-full"
+            />
+            <div>
+              <h3 className="text-3xl font-bold text-[#396d93]">Isabella Ruan</h3>
+              <p className="text-[#829cb0] font-medium mb-2">
+                <a
+                  href="https://www.etsy.com/ca/shop/DaisyStems"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#396d93] underline hover:text-[#2d5472] transition duration-300"
+                >
+                  Visit Daisy Stems on Etsy
+                </a>
+              </p>
+              <p className="text-[#829cb0] font-medium">
+                From sculpting Play-Doh figurines in kindergarten to reaching over two thousand 
+                sales in her own ceramics shop as a high school student, Isabella Ruan’s 
+                entrepreneurship has allowed her to share her passions with people across the 
+                world. Now, as a guest speaker at Youth Venture, she’s thrilled to use her 
+                knowledge and experience to help others discover their own potential in the world of business!
+              </p>
+            </div>
           </div>
         </div>
 
