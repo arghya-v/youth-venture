@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { FiChevronDown } from "react-icons/fi";
 import Founders from "../components/founders";
+import Link from 'next/link';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -68,7 +69,16 @@ const About = () => {
             </h3>
           </div>
         </div>
-        <Founders></Founders>
+        <Founders />
+
+        {/* Button to /team page */}
+        <div className="flex justify-center mt-6 mb-16">
+          <Link href="/team">
+            <button className="bg-[#396d93] hover:bg-[#34546b] text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition-all">
+              Meet the Team
+            </button>
+          </Link>
+        </div>
       </main>
 
       <Analytics />
@@ -76,5 +86,4 @@ const About = () => {
     </div>
   );
 };
-
 export default About;

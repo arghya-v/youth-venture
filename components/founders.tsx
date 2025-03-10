@@ -32,7 +32,7 @@ const teamMembers: TeamMemberType[] = [
       'Some of her hobbies include traveling, trying new foods/drinks, and snowboarding!',
     ],
     linkedin: 'https://www.linkedin.com/in/chantal-li-907b43244/',
-    email: 'mike@example.com',
+    email: 'chantal248611@gmail.com',
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const teamMembers: TeamMemberType[] = [
       'and browsing deals on Amazon in her free time.',
     ],
     linkedin: 'https://linkedin.com',
-    email: 'sarah@example.com',
+    email: 'youthventureint@gmail.com',
   },
 ];
 
