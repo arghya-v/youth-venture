@@ -13,9 +13,10 @@ const Media = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const script = document.createElement('script');
-      script.src = "https://static.elfsight.com/platform/platform.js";
+      script.src = "https://embedsocial.com/cdn/ht.js";
+      script.id = "EmbedSocialHashtagScript";
       script.async = true;
-      document.body.appendChild(script);
+      document.head.appendChild(script);
     }
   }, []);
 
@@ -40,9 +41,17 @@ const Media = () => {
         </p>
       </main>
 
-      {/* Elfsight widget container */}
-      <div className="elfsight-app-832c6128-92d1-460a-8580-0dbec9aa21fb max-w-full overflow-hidden mx-auto px-4"></div>
-      
+      {/* EmbedSocial widget */}
+      <div className="embedsocial-hashtag" data-ref="f12de9c38d249c50cbf8ea8d9d586d9a038dc274">
+        <a className="feed-powered-by-es feed-powered-by-es-feed-img es-widget-branding" 
+           href="https://embedsocial.com/social-media-aggregator/" 
+           target="_blank" 
+           title="Instagram widget">
+          <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial" />
+          <div className="es-widget-branding-text">Instagram widget</div>
+        </a>
+      </div>
+
       {/* Analytics */}
       <Analytics />
       <SpeedInsights />
