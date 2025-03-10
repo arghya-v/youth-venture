@@ -19,31 +19,32 @@ type TeamMemberType = {
   email: string;
 };
 
-const teamMembers: TeamMemberType[] = [
+const directors: TeamMemberType[] = [
   {
-    id: 3,
-    name: 'Chantal',
-    role: 'Founder',
-    image: '/team/chantal.jpg',
+    id: 5,
+    name: 'Evelyn Tang',
+    role: 'Director of Logistics',
+    image: '/team/Evelyn Tang.jpg',
     description: [
-      'Chantal is the co-founder of Youth Venture International', 
-      'an organization dedicated to helping students gain experience in the business', 
-      'and entrepreneurship world through workshops, events, competitions, and more.',
-      'Some of her hobbies include traveling, trying new foods/drinks, and snowboarding!',
+      'Evelyn, the Director of Logistics, dedicates her time to brainstorming innovative ideas for Youth Venture.', 
+      'In her free time, she plays competitive basketball, creates captivating videography pieces, ', 
+      'and explores new ways to make a positive impact on the world. She is looking forward to working with',
+      'her new team and can’t wait to see what the future holds for Youth Venture!',
     ],
     linkedin: 'https://www.linkedin.com/in/chantal-li-907b43244/',
     email: 'mike@example.com',
   },
   {
-    id: 4,
-    name: 'Vicky',
-    role: 'Founder',
-    image: '/team/vicky.jpg',
+    id: 6,
+    name: 'Gautam Goyal',
+    role: 'Director of Outreach',
+    image: '/team/Gautam Goyal.jpg',
     description: [
-      'Vicky is a co-founder of Youth Venture, and she is excited to share her passion',
-       'for business and provide youth with hands-on experiences in the business world.',
-      'You can find Vicky completing new arts and crafts projects, trying new desserts',
-      'and browsing deals on Amazon in her free time.',
+      'Gautam is the Director of Outreach at Youth Venture this year, aiming to make business accessible to high school students worldwide through workshops, ',
+        'competitions and guest speaker panels. Gautam aspires to lead positive change in his community by actively engaging',
+      'himself in organizations nationwide. As someone obsessed with finance, he serves as the Director of Academia for Target Alpha Canada, preparing educational materials centered around',
+      'financial literacy for thousands of students. He is also heavily involved in his school community, currently serving as the Vice President for the Imaginons le Français Conference, Head of ',
+      'Finance for the Math and Computing Club and the SOAR Conference. In his free time, you can find Gautam playing badminton, catching up on finance news or sleeping!',
     ],
     linkedin: 'https://linkedin.com',
     email: 'sarah@example.com',
@@ -95,7 +96,7 @@ const TeamMember: React.FC<{ member: TeamMemberType }> = ({ member }) => {
   );
 };
 
-const Founders = () => {
+const members = () => {
   return (
     <section
       className="bg-[#f2f2f2] py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center"
@@ -109,7 +110,7 @@ const Founders = () => {
           Meet Our Founders!
         </h2>
         <div className="flex flex-wrap justify-center gap-8">
-          {teamMembers.map((member) => (
+          {directors.map((member) => (
             <TeamMember key={member.id} member={member} />
           ))}
         </div>
@@ -118,4 +119,4 @@ const Founders = () => {
   );
 };
 
-export default Founders;
+export default members;
