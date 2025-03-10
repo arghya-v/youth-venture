@@ -48,7 +48,7 @@ const Media = () => {
            target="_blank" 
            title="Instagram widget">
           <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial" />
-          <div className="es-widget-branding-text">Instagram widget</div>
+          <div className="es-widget-branding-text">Powered By EmbedSocial</div>
         </a>
       </div>
 
