@@ -27,10 +27,8 @@ const directors: TeamMemberType[] = [
     role: 'Founder',
     image: '/team/chantal.jpg',
     description: [
-      'Chantal is the co-founder of Youth Venture International', 
-      'an organization dedicated to helping students gain experience in the business', 
-      'and entrepreneurship world through workshops, events, competitions, and more.',
-      'Some of her hobbies include traveling, trying new foods/drinks, and snowboarding!',
+      'Chantal is the co-founder of Youth Venture International, an organization dedicated to help students gain experience in the business and entrepreneurship world through workshops, events, competitions and more. Some of her hobbies include travelling, trying new foods/drinks and snowboarding!', 
+      
     ],
     linkedin: 'https://www.linkedin.com/in/chantal-li-907b43244/',
     email: 'chantal248611@gmail.com',
@@ -41,10 +39,8 @@ const directors: TeamMemberType[] = [
     role: 'Founder',
     image: '/team/vicky.jpg',
     description: [
-      'Vicky is a co-founder of Youth Venture, and she is excited to share her passion',
-       'for business and provide youth with hands-on experiences in the business world.',
-      'You can find Vicky completing new arts and crafts projects, trying new desserts',
-      'and browsing deals on Amazon in her free time.',
+      'Vicky is a co-founder of Youth Venture and she is excited to share her passion for business and provide youth with hands-on experiences in the business world. You can find Vicky completing new arts and crafts projects, trying new desserts and browsing deals on Amazon in her free time!',
+      
     ],
     linkedin: 'https://linkedin.com',
     email: 'youthventureint@gmail.com',
@@ -55,10 +51,7 @@ const directors: TeamMemberType[] = [
     role: "Director of Logistics",
     image: "/team/Evelyn Tang.jpg",
     description: [
-      "Evelyn, the Director of Logistics, dedicates her time to brainstorming innovative ideas for Youth Venture.",
-      "In her free time, she plays competitive basketball, creates captivating videography pieces,",
-      "and explores new ways to make a positive impact on the world.",
-      "She is looking forward to working with her new team and can’t wait to see what the future holds for Youth Venture!",
+      "Evelyn, the Director of Logistics, dedicates her time to brainstorming innovative ideas for Youth Venture. In her free time, she plays competitive basketball, creates captivating videography pieces, and explores new ways to make a positive impact on the world. She is looking forward to working with her new team and can’t wait to see what the future holds for Youth Venture!",
     ],
     linkedin: "https://www.linkedin.com/in/evelyn-tang-08ab28320/",
     email: "levtktang@gmail.com",
@@ -69,10 +62,7 @@ const directors: TeamMemberType[] = [
     role: "Director of Outreach",
     image: "/team/Gautam Goyal.jpg",
     description: [
-      "Gautam is the Director of Outreach at Youth Venture this year, aiming to make business accessible to high school students worldwide through workshops,",
-      "competitions, and guest speaker panels. Gautam aspires to lead positive change in his community by actively engaging in organizations nationwide.",
-      "As someone obsessed with finance, he serves as the Director of Academia for Target Alpha Canada, preparing educational materials centered around",
-      "financial literacy for thousands of students. In his free time, you can find Gautam playing badminton, catching up on finance news, or sleeping!",
+      "Gautam is the Director of Outreach at Youth Venture this year, aiming to make business accessible to high school students worldwide through workshops, competitions and guest speaker panels. Gautam aspires to lead positive change in his community by actively engaging himself in organizations nationwide. As someone obsessed with finance, he serves as the Director of Academia for Target Alpha Canada, preparing educational materials centered around financial literacy for thousands of students. He is also heavily involved in his school community, currently serving as the Vice President for the Imaginons le Français Conference, Head of Finance for the Math and Computing Club and the SOAR Conference. In his free time, you can find Gautam playing badminton, catching up on finance news or sleeping!",
     ],
     linkedin: "https://www.linkedin.com/in/gautamgoyal9/",
     email: "cagautamgoel@gmail.com",
@@ -83,9 +73,7 @@ const directors: TeamMemberType[] = [
     role: "Director of IT",
     image: "/team/arghya.jpg",
     description: [
-      "Arghya helps to keep the website up to date. In his free time, he likes to play video games, basketball, and more!",
-      "Arghya is very passionate about STEM and business, taking a part in creating his own food business and t-shirt business in middle school",
-      "He also enjoys working with robotics, and has taken part in the First Robotics and Vex Robotics competitions.",
+      "Arghya helps to keep the website up to date. In his free time, he likes to play video games, basketball, and more! Arghya is very passionate about STEM and business, taking a part in creating his own food business and t-shirt business in middle school He also enjoys working with robotics, and has taken part in the First Robotics and Vex Robotics competitions.",
     ],
     linkedin: "https://www.linkedin.com/in/arghya-vyas-2a40a72b1/",
     email: "arghyavyas775@gmail.com",
@@ -107,9 +95,7 @@ const directors: TeamMemberType[] = [
     role: "Director of Marketing",
     image: "/team/Stephanie Cao.jpeg",
     description: [
-      "Stephanie is the Director of Marketing at Youth Venture this year, she is responsible for crafting and executing strategic marketing initiatives that amplify Youth Venture’s mission and engage the audiences. ",
-      "Stephanie focuses on building cohesive and recognizable brands while leveraging analytics and creative approaches to expand Youth Venutre’s reach and inspire action.",
-      "In Stephanie’s free time, she enjoys exploring the world of fashion and finding creative ways to merge my interests in business and branding. She loves staying updated on marketing trends and discovering how businesses create connections with their audiences. ",
+      "Stephanie is the Director of Marketing at Youth Venture this year, she is responsible for crafting and executing strategic marketing initiatives that amplify Youth Venture’s mission and engage the audiences. Stephanie focuses on building cohesive and recognizable brands while leveraging analytics and creative approaches to expand Youth Venutre’s reach and inspire action.In Stephanie’s free time, she enjoys exploring the world of fashion and finding creative ways to merge my interests in business and branding. She loves staying updated on marketing trends and discovering how businesses create connections with their audiences.",
     ],
     linkedin: "https://www.linkedin.com",
     email: "scao2008@gmail.com",
@@ -120,8 +106,7 @@ const directors: TeamMemberType[] = [
     role: "Director of Design",
     image: "/team/Olivia (1).jpg",
     description: [
-      "Olivia designs Instagram posts and she helps manage Youth Venture’s social media account. ",
-      "When she’s not on the assignment grind, she likes reading, collecting stickers, and drinking (insanely overpriced) matcha lattes.",
+      "Olivia designs Instagram posts and she helps manage Youth Venture’s social media account. When she’s not on the assignment grind, she likes reading, collecting stickers, and drinking (insanely overpriced) matcha lattes.",
     ],
     linkedin: "https://www.linkedin.com/in/olivia-zhen-24495a293/",
     email: "contactoliviazhen@gmail.com",
@@ -132,8 +117,7 @@ const directors: TeamMemberType[] = [
     role: "Director of Conference",
     image: "/youthlogo.png",
     description: [
-      "Aanya is the Director of Conference at Youth Venture, she is in charge of organizing and directing events for Youth Venture and ensuring everything runs smoothly. ",
-      "In her free time she loves to go on walks",
+      "Aanya is the Director of Conference at Youth Venture, she is in charge of organizing and directing events for Youth Venture and ensuring everything runs smoothly. In her free time she loves to go on walks",
     ],
     linkedin: "https://www.linkedin.com",
     email: "youthventureint@gmail.com",
