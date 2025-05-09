@@ -19,13 +19,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       );
 
       res.status(200).json({
-        message:
-          'Your email has been successfully added to the mailing list. Welcome 👋',
+        message: 'Your email has been successfully added to the mailing list. Welcome 👋',
       });
-    } catch (err) {
+    } catch {
+      // No need for `err` here
       res.status(500).json({
-        message:
-          'Oops, there was a problem with your subscription, please try again or contact us',
+        message: 'Oops, there was a problem with your subscription, please try again or contact us.',
       });
     }
   } else {
@@ -33,6 +32,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }
-
-console.log('SENDGRID_SECRET:', process.env.SENDGRID_SECRET);
-console.log('SENDGRID_MAILING_ID:', process.env.SENDGRID_MAILING_ID);
