@@ -57,7 +57,7 @@ const MailingList = () => {
     }`}
     disabled={loading}
   >
-    I'm in!
+    I am in!
   </button>
 </div>
 
