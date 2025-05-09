@@ -37,6 +37,7 @@ const Home = () => {
 
       <Analytics />
       <SpeedInsights />
+      
     </div>
   );
 };

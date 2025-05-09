@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import ContactUsForm from "@/components/contactform";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import MailingList from '@/components/MailingList';
 
 // Configure Poppins font to prevent layout shifts
 const poppins = Poppins({
@@ -114,8 +115,10 @@ const Contact = () => {
           border-radius: 12px;
         }
       `}</style>
+      <MailingList />
     </>
   );
+ 
 };
 
 export default Contact;

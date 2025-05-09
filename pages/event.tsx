@@ -2,6 +2,7 @@ import Navbar from "../components/navbar";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import MailingList from '@/components/MailingList';
 import Image from "next/image";
 
 const poppins = Poppins({
@@ -134,6 +135,7 @@ const Event = () => {
 
       <Analytics />
       <SpeedInsights />
+      <MailingList />
     </div>
   );
 };

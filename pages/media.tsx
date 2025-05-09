@@ -3,6 +3,7 @@ import Navbar from '../components/navbar';
 import { Poppins } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import MailingList from '@/components/MailingList';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -55,6 +56,7 @@ const Media = () => {
       {/* Analytics */}
       <Analytics />
       <SpeedInsights />
+      <MailingList />
     </div>
   );
 };

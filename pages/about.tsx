@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { FiChevronDown } from "react-icons/fi";
 import Founders from "../components/founders";
+import MailingList from '@/components/MailingList';
 import Link from 'next/link';
 
 const poppins = Poppins({
@@ -83,6 +84,7 @@ const About = () => {
 
       <Analytics />
       <SpeedInsights />
+      <MailingList />
     </div>
   );
 };

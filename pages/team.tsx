@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Members from '../components/members';
+import MailingList from '@/components/MailingList';
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '700', '500', '600'],
@@ -30,6 +31,7 @@ const Team = () => {
       <Members/>
       <Analytics />
       <SpeedInsights />
+      <MailingList />
     </div>
   );
 };
