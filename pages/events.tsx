@@ -114,7 +114,7 @@ const EventPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                 <div className="p-4 border rounded-lg shadow bg-white">
                   <h4 className="text-xl font-bold text-[#396d93]">Fiona Chen</h4>
-                  <p className="text-[#829cb0]">Queen's Smith School of Business</p>
+                  <p className="text-[#829cb0]">Queens Smith School of Business</p>
                 </div>
                 <div className="p-4 border rounded-lg shadow bg-white">
                   <h4 className="text-xl font-bold text-[#396d93]">Emma Thompson</h4>
