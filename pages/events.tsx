@@ -108,6 +108,29 @@ const EventPage = () => {
         >
           Register Now
         </a>
+
+        <div className="mt-12 max-w-3xl mx-auto text-left">
+  <h3 className="text-3xl font-bold text-[#396d93] mb-6 text-center">
+    Timeline
+  </h3>
+  <ul className="space-y-4 text-[#829cb0] text-lg text-center">
+    <li>
+      <span className="font-semibold text-[#396d93]">Scholarship Introduction:</span> 4:00 pm – 4:15 pm
+    </li>
+    <li>
+      <span className="font-semibold text-[#396d93]">Workshop Speaker: Judy Fiebig</span> 4:15 pm – 4:40 pm
+    </li>
+    <li>
+      <span className="font-semibold text-[#396d93]">Loran Panel + Q&amp;A:</span> 4:40 pm – 5:00 pm
+    </li>
+    <li>
+      <span className="font-semibold text-[#396d93]">Mock Interview:</span> 5:00 pm – 5:20 pm
+    </li>
+    <li>
+      <span className="font-semibold text-[#396d93]">Closing:</span> 5:20 pm – 5:30 pm
+    </li>
+  </ul>
+</div>
         {/* Modal for speaker details */}
         {selectedSpeaker && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
