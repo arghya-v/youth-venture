@@ -23,7 +23,7 @@ type TeamMemberType = {
 const directors: TeamMemberType[] = [
   {
     id: 3,
-    name: 'Chantal',
+    name: 'Chantal Li',
     role: 'Founder',
     image: '/team/chantal.jpg',
     description: [
@@ -35,7 +35,7 @@ const directors: TeamMemberType[] = [
   },
   {
     id: 4,
-    name: 'Vicky',
+    name: 'Vicky Liu',
     role: 'Founder',
     image: '/team/vicky.jpg',
     description: [
