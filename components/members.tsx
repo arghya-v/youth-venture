@@ -186,7 +186,7 @@ const TeamMember: React.FC<{ member: TeamMemberType; onClick: () => void }> = ({
         alt={`${member.name} - ${member.role}`}
         width={300}
         height={375}
-        className="w-full aspect-[4/5] object-cover rounded-md"
+        className="w-full aspect-square object-cover rounded-md"
       />
       <h3 className="text-lg font-semibold text-gray-800 mt-2">{member.name}</h3>
       <p className="text-xs text-gray-600">{member.role}</p>
