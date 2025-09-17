@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() { return request.auth != null; }
+    function userId() { return request.auth.uid; }
+
+    match /users/{uid} {
+      allow read: if isSignedIn() && uid == userId();
+      allow create: if isSignedIn() && uid == userId();
+      allow update: if isSignedIn() && uid == userId();
+    }
+
+    match /events/{eventId} {
+      allow read: if true; // public
+      allow write: if false; // admins via console
+    }
+
+    match /pitches/{pitchId} {
+      allow read: if true;
+      allow create: if isSignedIn() &&
+        request.resource.data.userID == userId() &&
+        get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['participant']) &&
+  exists(/databases/$(database)/documents/events/$(request.resource.data.eventID)) &&
+  get(/databases/$(database)/documents/events/$(request.resource.data.eventID)).data.submissionsOpen == true;
+      allow update: if isSignedIn() && resource.data.userID == userId();
+      allow delete: if false;
+    }
+
+    match /votes/{voteId} {
+      allow read: if true;
+      allow create: if isSignedIn() &&
+        request.resource.data.userID == userId() &&
+        get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['voter']) &&
+        voteId == (request.resource.data.eventID + '_' + userId()) &&
+  !exists(/databases/$(database)/documents/votes/$(voteId)) &&
+  exists(/databases/$(database)/documents/events/$(request.resource.data.eventID)) &&
+  get(/databases/$(database)/documents/events/$(request.resource.data.eventID)).data.votingOpen == true;
+      allow update, delete: if false;
+    }
+
+    match /scores/{scoreId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn() &&
+        request.resource.data.judgeID == userId() &&
+        get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['judge']) &&
+        exists(/databases/$(database)/documents/pitches/$(request.resource.data.pitchID)) &&
+        get(/databases/$(database)/documents/pitches/$(request.resource.data.pitchID)).data.isTop10 == true;
+      allow delete: if false;
+    }
+  }
+}

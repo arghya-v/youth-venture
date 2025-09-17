@@ -38,3 +38,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+---
+
+## Shark Tank Platform (Firebase + Next.js)
+
+This repo includes a lightweight platform to run pitch events with:
+
+- Authentication (Google) and roles stored in Firestore (`users.roles`).
+- Pitch submissions (`/submit`).
+- Public gallery and voting (`/pitches`).
+- Leaderboard (`/leaderboard`).
+- Judge scoring (`/judge`).
+- Final results (`/results`).
+
+Setup steps:
+
+1. Create a Firebase project. Enable Authentication (Google provider) and Firestore.
+2. Copy `.env.local.example` to `.env.local` and fill in Firebase config.
+3. Create Firestore collections as needed; add an event document in `events` with fields:
+	- `name: string`
+	- `isActive: true`
+	- `submissionsOpen: true/false`
+	- `votingOpen: true/false`
+4. Optionally set `NEXT_PUBLIC_CURRENT_EVENT_ID` in `.env.local` to pin to a specific event.
+5. Add user roles by editing documents in `users/{uid}` with `roles: ["participant", "voter", "judge", "admin"]` as needed.
+6. Deploy Firestore rules from `firebase.rules` to enforce one vote per user and scoped access.
+
+Notes:
+
+- Admins flip flags on the event document to open/close submissions and voting; mark Top 10 by setting `isTop10=true` on selected pitches; publish winners by setting `finalRank` (1..3) and `winner=true` on pitch docs.
+- No backend functions are required; everything runs client-side against Firestore.
