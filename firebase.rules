@@ -3,16 +3,22 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function isSignedIn() { return request.auth != null; }
     function userId() { return request.auth.uid; }
+    function isAdmin() { 
+      return isSignedIn() && 
+      exists(/databases/$(database)/documents/users/$(userId())) &&
+      get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['admin']); 
+    }
 
     match /users/{uid} {
-      allow read: if isSignedIn() && uid == userId();
+      allow read: if isSignedIn() && (uid == userId() || isAdmin());
       allow create: if isSignedIn() && uid == userId();
-      allow update: if isSignedIn() && uid == userId();
+      allow update: if isSignedIn() && (uid == userId() || isAdmin());
+      allow delete: if isAdmin();
     }
 
     match /events/{eventId} {
       allow read: if true; // public
-      allow write: if false; // admins via console
+      allow write: if isAdmin(); // admins can manage events
     }
 
     match /pitches/{pitchId} {
@@ -20,10 +26,10 @@ service cloud.firestore {
       allow create: if isSignedIn() &&
         request.resource.data.userID == userId() &&
         get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['participant']) &&
-  exists(/databases/$(database)/documents/events/$(request.resource.data.eventID)) &&
-  get(/databases/$(database)/documents/events/$(request.resource.data.eventID)).data.submissionsOpen == true;
-      allow update: if isSignedIn() && resource.data.userID == userId();
-      allow delete: if false;
+        exists(/databases/$(database)/documents/events/$(request.resource.data.eventID)) &&
+        get(/databases/$(database)/documents/events/$(request.resource.data.eventID)).data.submissionsOpen == true;
+      allow update: if isSignedIn() && (resource.data.userID == userId() || isAdmin());
+      allow delete: if isAdmin();
     }
 
     match /votes/{voteId} {
@@ -32,10 +38,10 @@ service cloud.firestore {
         request.resource.data.userID == userId() &&
         get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['voter']) &&
         voteId == (request.resource.data.eventID + '_' + userId()) &&
-  !exists(/databases/$(database)/documents/votes/$(voteId)) &&
-  exists(/databases/$(database)/documents/events/$(request.resource.data.eventID)) &&
-  get(/databases/$(database)/documents/events/$(request.resource.data.eventID)).data.votingOpen == true;
-      allow update, delete: if false;
+        !exists(/databases/$(database)/documents/votes/$(voteId)) &&
+        exists(/databases/$(database)/documents/events/$(request.resource.data.eventID)) &&
+        get(/databases/$(database)/documents/events/$(request.resource.data.eventID)).data.votingOpen == true;
+      allow update, delete: if isAdmin();
     }
 
     match /scores/{scoreId} {
@@ -45,7 +51,7 @@ service cloud.firestore {
         get(/databases/$(database)/documents/users/$(userId())).data.roles.hasAny(['judge']) &&
         exists(/databases/$(database)/documents/pitches/$(request.resource.data.pitchID)) &&
         get(/databases/$(database)/documents/pitches/$(request.resource.data.pitchID)).data.isTop10 == true;
-      allow delete: if false;
+      allow delete: if isAdmin();
     }
   }
 }

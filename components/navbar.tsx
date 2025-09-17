@@ -118,6 +118,18 @@ const Navbar = () => {
                     {label}
                   </Link>
                 ))}
+                {profile?.roles?.includes('admin') && (
+                  <>
+                    <div className="border-t border-gray-100"></div>
+                    <Link
+                      href="/admin"
+                      className="block px-4 py-2 text-sm text-orange-600 hover:bg-gray-50 font-medium"
+                      onClick={() => setIsSharkTankOpen(false)}
+                    >
+                      Admin
+                    </Link>
+                  </>
+                )}
               </div>
             )}
           </div>
@@ -213,6 +225,15 @@ const Navbar = () => {
                   {label}
                 </Link>
               ))}
+              {profile?.roles?.includes('admin') && (
+                <Link
+                  href="/admin"
+                  className="py-2 font-medium text-orange-600 hover:text-orange-700 transition-colors duration-200 block"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Admin
+                </Link>
+              )}
             </div>
 
             {/* Auth Mobile Links */}
